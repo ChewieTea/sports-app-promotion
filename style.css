@@ -8,6 +8,22 @@ body {
     position: relative;
 }
 
+/** scrol timeline */
+.hidden {
+    opacity:0;
+    transition:all 1s;
+}
+
+.show {
+    opacity:1;
+}
+
+
+
+
+
+
+
 /* presets */
 h1 {
     font-size: 44px;
@@ -281,6 +297,9 @@ section:nth-child(odd) {
 .three img {
     width: 14rem;
     border-radius: 14%;
+    -webkit-filter: drop-shadow(0px 0px 40px rgba(189,131,131,0.3));
+    filter:drop-shadow(0px 30px 40px rgba(189,131,131,0.3));
+    transform: drop;
 }
 
 .four {
@@ -289,8 +308,8 @@ section:nth-child(odd) {
 
 .four img {
     width: 14rem;
-    -webkit-mask-image: linear-gradient(black, transparent);
-    mask-image: linear-gradient(black, transparent);
+    -webkit-filter: drop-shadow(0px 10px 25px rgba(189,131,131,0.3));
+    filter:drop-shadow(0px 10px 25px rgba(189,131,131,0.3));
 }
 
 .image-wrap i {
@@ -303,6 +322,17 @@ section:nth-child(odd) {
     border-radius: 50%;
     transform: rotate(20deg);
     z-index:1;
+}
+
+#arrow img {
+    position: absolute;
+    width: 3rem;
+    top:0;
+    right:0;
+    transform: translate(105%, -120%);
+    color:white;
+    opacity:1;
+    transition: .2s linear ;
 }
 
 .image-wrap h3::before {
@@ -321,6 +351,7 @@ section:nth-child(odd) {
     left:-20px;
     transform: rotate(-18deg);
     background-color: #bd8383;
+    color:black;
     border-radius: .6rem;
 }
 
@@ -333,35 +364,22 @@ section:nth-child(odd) {
     border-radius: .6rem;
 }
 
-/*.image-wrap h3#blobB:hover {
-    top: 20px;
-    left:-2px;
-    transform: rotate(-6deg);
-}*/
-
-
 .image-wrap h3#blobC {
     position:absolute;
-    top:60px;
+    top:90px;
     right:-20px;
     transform: rotate(10deg);
     background-color: #452626;
     border-radius: .6rem;
 }
 
-/*.image-wrap h3#blobC:hover {
-    top: 50px;
-    right:-25px;
-    transform: rotate(5deg);
-}*/
-
 .blob {
     transition: all cubic-bezier(0.175, 0.885, 0.32, 1.275) .3s;
 }
 
 #icon:hover ~ #blobA {
-    top: -60px;
-    transform: rotate(-28deg);
+    top: -65px;
+    transform: rotate(-24deg);
 }
 
 #icon:hover ~ #blobB {
@@ -372,8 +390,12 @@ section:nth-child(odd) {
 
 #icon:hover ~ #blobC {
     top: 50px;
-    right:-25px;
+    right:-40px;
     transform: rotate(5deg);
+}
+
+#icon:hover ~ #arrow img {
+    opacity: 0.3;
 }
 /** CTA -- */
 
@@ -417,4 +439,13 @@ section:nth-child(odd) {
     .cta h1 {
         font-size: 24px;
     }
+}
+
+footer {
+    text-align: center;
+    padding: .2rem;
+}
+
+footer p {
+    font-size: 14px;
 }

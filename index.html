@@ -6,6 +6,7 @@
     <title>Sports App</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
 </head>
 <body> <!--? add background image of lines which correspond to the content -->
 
@@ -18,11 +19,11 @@
 
     <header>
         <h1><i>Foot</i>Forward</h1>
-        <img src="media/foot.png" alt="close up of a sports shoe about to set off">
+        <img src="media/logo.png" alt="close up of a sports shoe about to set off">
         
     </header>
     
-    <section class="sect">
+    <section class="hidden sect">
         <!--* image -->
         <img src="media/foot.png" id="foot" alt="close up of a sports shoe about to set off">
         <!--* h1 & textbox & button -->    
@@ -34,11 +35,11 @@
 
     </section>
 
-    <section class="sect two">
+    <section class="hidden sect two">
             <h2 id="break">Cardio has never been <b><i>EASIER</i></b></h2>
     </section>
 
-    <section class="sect">
+    <section class="hidden sect">
         <div class="textbox btn">
             <h2><b><i>Calculates Weather</i></b> For You</h2>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel quaerat corrupti iusto quidem velit, recusandae veniam cumque eaque ipsam, debitis, amet vitae! Quod consequuntur impedit delectus.</p>
@@ -52,9 +53,9 @@
 
     </section>
 
-    <section class="sect three">
+    <section class="hidden sect three">
         <!--! change image -->
-        <img src="media/foot.png" alt="close up of a sports shoe about to set off">
+        <img src="media/—Pngtree—flat wind data financial report_5472885.png" alt="close up of a sports shoe about to set off">
         <!--* h1 & textbox & button -->    
         <div class="textbox btn">
             <h2><b><i>Statistics</i></b> For You</h2>
@@ -63,7 +64,7 @@
         </div>   
     </section>
 
-    <section class="sect four">   
+    <section class="hidden sect four">   
         <!--* h1 & textbox & button -->    
         <div class="textbox btn">
             <h2><b><i>Community</i></b> Here For You</h2>
@@ -72,7 +73,8 @@
         </div>  <!--! add a "try/hover me" decoration -->
         <div class="image-wrap">
             <i id="icon" class="fa-regular fa-bell"></i>
-            <img src="media/monitorjpg.jpg" alt="close up of a sports shoe about to set off">
+            <div id="arrow"><img src="media/spiral-arrow.svg"></div>
+            <img src="media/monitorjpg.png" alt="close up of a sports shoe about to set off">
             <h3 id="blobA" class="blob">"You've got this!!!"</h3>
             <h3 id="blobB" class="blob">"Keep going, you're almost there!"</h3>
             <h3 id="blobC" class="blob">"First Foot Forward :D"</h3>
@@ -80,15 +82,15 @@
     </section>
 
     <!--! CTA & image with text and button-->
-    <section class="cta btn">
+    <section class="hidden cta btn">
         <h1><b>Do you have a </b>question?</h1>
         <button id="cta">CONTACT US</button>
     
     </section>
 
     <footer>
-        <!-- * contact + licenses -->
+        <p>@copyright ChewieTea 2004.</p>
     </footer>
-
+    <script src="app.js"></script>
 </body>
 </html>
