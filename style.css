@@ -4,7 +4,7 @@
 }
 
 body {
-    background: #010101;
+    background: #000;
     position: relative;
 }
 
@@ -136,11 +136,11 @@ header img {
 }
 
 .sect:nth-child(odd) {
-    background: radial-gradient(at right center, #010042, 8%, #000);
+    background: radial-gradient(at right center, #010024, 8%, #000);
 }
 
 .sect:nth-child(even) {
-    background: radial-gradient(at left center, #0f0e3b, 2%, #000);
+    background: radial-gradient(at left center, #09081f, 2%, #000);
 }
 
 /*! image space Header 1 */
