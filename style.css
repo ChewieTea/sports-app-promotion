@@ -60,17 +60,16 @@ nav {
     position: relative;
     justify-content: space-between;
     text-align: center;
-    top: 0%;
     left: calc((100% - var(--width)) / 2);
     padding: .2rem .8rem;
     border: #d4bdbd 1px solid;
     border-radius: .8rem;
-    background: #452626;
+    background: rgb(69, 38, 38, .6);
     background-image:
     radial-gradient(
         at center top,
-        #7f4949, 7%,
-        #010101);
+        rgba(127, 73, 73, .96), 7%,
+        rgba(0, 0, 0, .6));
     z-index: 1;
     overflow:clip;
     transition: 0.4s cubic-bezier(0.47, 0, 0.745, 0.715);
@@ -86,8 +85,8 @@ nav::before {
     background-image:
         radial-gradient(
         at center top,
-        #bd8383, 8%,
-        #010101);
+        rgba(189, 131, 131, .96), 8%,
+        rgba(1, 1, 1, .6));
     z-index: -1;
     transition: 0.4s cubic-bezier(0.47, 0, 0.745, 0.715);
     opacity: 0;
@@ -96,6 +95,46 @@ nav::before {
 nav:hover::before {
     opacity: 1;
 }
+
+.nav-top {
+    position: fixed;
+    place-items: center;
+    z-index: 1030;
+}
+
+/** Nav bar load-in */
+
+.slide-in-top {
+	-webkit-animation: slide-in-top 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.16s both;
+	        animation: slide-in-top 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.16s both;
+}
+
+@-webkit-keyframes slide-in-top {
+0% {
+    -webkit-transform: translateY(-1000px);
+            transform: translateY(-1000px);
+    opacity: 0;
+}
+100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+}
+}
+@keyframes slide-in-top {
+0% {
+    -webkit-transform: translateY(-1000px);
+            transform: translateY(-1000px);
+    opacity: 0;
+}
+100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+}
+}
+  
+  
 
 nav a {
     text-decoration: none;
@@ -116,7 +155,7 @@ header {
     justify-content: space-between;
     align-content: flex-start;
     flex-wrap: wrap;
-    padding: 0 1rem;
+    padding: 2rem 1rem;
     margin: 0;
     transform: translateY(-5vh);
 }
