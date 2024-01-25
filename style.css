@@ -179,7 +179,7 @@ header img {
 }
 
 .sect:nth-child(even) {
-    background: radial-gradient(at left center, #09081f, 2%, #000);
+    background: radial-gradient(at left center, #0f0d36, 4%, #000);
 }
 
 /*! image space Header 1 */
